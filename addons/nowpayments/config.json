@@ -1,0 +1,60 @@
+{
+  "name": "NowPayments",
+  "alias": "nowpayments",
+  "version": "1.0",
+  "thumbnail": "images/addons/nowpayments/thumbnail.png",
+  "path": "addons/nowpayments",
+  "action": "financial/payment-gateways",
+  "status": null,
+  "type": "addon",
+  "item": {
+    "alias": "uab_codebob",
+    "version": "1.1"
+  },
+  "script": {
+    "alias": "codebob",
+    "version": "1.1"
+  },
+  "database": {
+    "files": ["addons/nowpayments/sql/database.sql"]
+  },
+  "general_files": {
+    "remove": {
+      "directories": [],
+      "files": []
+    },
+    "create": {
+      "directories": ["public/images/addons/nowpayments/"]
+    },
+    "copy": {
+      "directories": [],
+      "files": [
+        {
+          "root": "addons/nowpayments/thumbnail.png",
+          "destination": "public/images/addons/nowpayments/thumbnail.png"
+        },
+        {
+          "root": "addons/nowpayments/images/nowpayments.png",
+          "destination": "public/images/payment-gateways/nowpayments.png"
+        },
+        {
+          "root": "addons/nowpayments/controllers/NowpaymentsController.php",
+          "destination": "app/Http/Controllers/Payments/NowpaymentsController.php"
+        }
+      ]
+    }
+  },
+  "theme_files": {
+    "remove": {
+      "directories": [],
+      "files": []
+    },
+    "create": {
+      "directories": []
+    },
+    "copy": {
+      "directories": [],
+      "files": []
+    }
+  }
+}

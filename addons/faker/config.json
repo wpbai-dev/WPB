@@ -1,0 +1,45 @@
+{
+    "name": "Faker",
+    "alias": "faker",
+    "version": "1.2",
+    "thumbnail": "images/addons/faker/thumbnail.png",
+    "path": "addons/faker",
+    "action": "faker/tools",
+    "status": 0,
+    "type": "addon",
+    "item": {
+        "alias": "faker_codebob",
+        "version": "1.2"
+    },
+    "script": {
+        "alias": "codebob",
+        "version": "1.3"
+    },
+    "database": {
+        "files": ["addons/faker/sql/database.sql"]
+    },
+    "general_files": {
+        "remove": {
+            "directories": [],
+            "files": []
+        },
+        "create": {
+            "directories": ["public/images/addons/faker/"]
+        },
+        "copy": {
+            "directories": [{
+                "root": "addons/faker/views/",
+                "destination": "resources/views/admin/"
+            }],
+            "files": [{
+                    "root": "addons/faker/thumbnail.png",
+                    "destination": "public/images/addons/faker/thumbnail.png"
+                },
+                {
+                    "root": "addons/faker/controllers/FakerController.php",
+                    "destination": "app/Http/Controllers/Admin/FakerController.php"
+                }
+            ]
+        }
+    }
+}
